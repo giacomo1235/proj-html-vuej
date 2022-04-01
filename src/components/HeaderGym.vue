@@ -63,7 +63,7 @@ header
   z-index: 6666666
   position: fixed
   background-color: transparent
-  padding: 1rem
+  padding: 1rem 0
   width: 100%
   .container
     @include flex-layout (center, space-between, wrap)

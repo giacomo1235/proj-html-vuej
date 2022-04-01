@@ -7,6 +7,13 @@
         <button>join us today</button>
       </div>
     </section>
+    <section class="worldfitness">
+        <div class="content">
+            <h1>WORLD CLASS Fitness</h1>
+            <img src="../assets/images/divider-xx-red.png" alt="doble cross">
+            <p>At Avada Gym, everything we do from top to bottom is of the highest quality to ensure we're equipped to help you reach your goals of a healthy and fit lifestyle.</p>
+        </div>
+    </section>
   </main>
 </template>
 
@@ -21,23 +28,22 @@ export default {
 main
   .jumbotron
     width: 100%
-    height: 100vh
+    height: calc(100vh + 167px)
     background-image: url('../assets/images/home-banner.jpg')
     background-position: top
     background-size: cover
-    position: relative
+    @include flex-layout (center, center, wrap)
     .content
       @include flex-layout (center, center, wrap)
+      margin: 0 auto
       flex-direction: column
-      position: absolute
-      top: 50%
-      left: 50%
-      transform: translate(-50%, -30%)
       color: $white
-      width: 100%
+      width: 80%
       h1
         text-transform: uppercase
         font-size: 5rem
+      p
+        margin: 1.5rem 0
       button
         background-color: transparent
         padding: 1rem 1.5rem
@@ -48,5 +54,16 @@ main
         &:hover
           color: $chestnut_rose
           border-color: $chestnut_rose
-
+  .worldfitness
+    background-color: $shark
+    .content
+      color: $white
+      margin: 0 auto
+      padding: 4rem 0
+      text-align: center
+      width: 50%
+      img
+        padding: 2rem 0
+      p
+        color: $edward
 </style>
