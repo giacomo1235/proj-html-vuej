@@ -6,12 +6,9 @@
       </div>
       <nav>
         <ul class="links">
-          <li @mouseleave="setActiveIndex()" @mouseenter="setActiveIndex(index)" v-for="(link, index) in links" :key="index" :class="{active:index == activeIndex}" class="link"><a :href="link.href">{{link.text}}</a></li>
-          <!-- <li class="link">about us</li>
-          <li class="link">facilities</li>
-          <li class="link">membership</li>
-          <li class="link">tetimonials</li>
-          <li class="link">blog</li> -->
+          <li @mouseleave="setActiveIndex()" @mouseenter="setActiveIndex(index)" v-for="(link, index) in links" :key="index" :class="{active:index == activeIndex}" class="link">
+            <a :href="link.href">{{link.text}}</a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -63,8 +60,10 @@ export default {
 <style lang="sass" scoped>
 @import "../assets/styles/style"
 header
-  background-color: $shark
+  position: fixed
+  background-color: transparent
   padding: 1rem
+  width: 100%
   .container
     @include flex-layout (center, space-between, wrap)
     width: 90%
@@ -80,5 +79,7 @@ header
         a
           text-decoration: none
           color: $white
+          font-size: .9rem
+          font-weight: 500
           text-transform: uppercase
 </style>
