@@ -60,6 +60,7 @@ export default {
 <style lang="sass" scoped>
 @import "../assets/styles/style"
 header
+  z-index: 6666666
   position: fixed
   background-color: transparent
   padding: 1rem
