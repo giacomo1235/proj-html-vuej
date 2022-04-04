@@ -27,15 +27,15 @@ export default {
           text: 'home'
         },
         {
-          href: '#',
+          href: '#!',
           text: 'about us'
         },
         {
-          href: '#',
+          href: '#!',
           text: 'facilities'
         },
         {
-          href: '#',
+          href: '#!',
           text: 'membership'
         },
         {
@@ -43,7 +43,7 @@ export default {
           text: 'testimonials'
         },
         {
-          href: '#',
+          href: '#!',
           text: 'blog'
         }
       ]
