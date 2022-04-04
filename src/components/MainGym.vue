@@ -51,32 +51,11 @@
         <img src="../assets/images/divider-xx-red.png" alt="">
       </div>
       <div class="firstcards">
-        <div class="firstcard">
-          <img src="../assets/images/review_1-compressor.jpg" alt="reviewer 1">
+        <div class="firstcard" v-for=" card in arrSecondCardsReview" :key="card.image">
+          <img :src="card.image" :alt="card.name">
           <div class="text">
-            <p>"The trainers at Avada Gym have helped me reach my fitness goals beyond anything I could of hoped for. I love it!"</p>
-          <h1>- Tara Smith</h1>
-          </div>
-        </div>
-        <div class="firstcard">
-          <img src="../assets/images/review_1-compressor.jpg" alt="reviewer 1">
-          <div class="text">
-            <p>"The trainers at Avada Gym have helped me reach my fitness goals beyond anything I could of hoped for. I love it!"</p>
-          <h1>- Tara Smith</h1>
-          </div>
-        </div>
-        <div class="firstcard">
-          <img src="../assets/images/review_1-compressor.jpg" alt="reviewer 1">
-          <div class="text">
-            <p>"The trainers at Avada Gym have helped me reach my fitness goals beyond anything I could of hoped for. I love it!"</p>
-          <h1>- Tara Smith</h1>
-          </div>
-        </div>
-        <div class="firstcard">
-          <img src="../assets/images/review_1-compressor.jpg" alt="reviewer 1">
-          <div class="text">
-            <p>"The trainers at Avada Gym have helped me reach my fitness goals beyond anything I could of hoped for. I love it!"</p>
-          <h1>- Tara Smith</h1>
+            <p>"{{card.text}}"</p>
+          <h1>- {{card.name}}</h1>
           </div>
         </div>
       </div>
@@ -121,6 +100,28 @@ export default {
           font: 'fa-solid fa-heart-pulse',
           title: 'Strength & Conditioning',
           text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+        }
+      ],
+      arrSecondCardsReview: [
+        {
+          image: 'review_1-compressor.jpg',
+          text: 'The trainers at Avada Gym have helped me reach my fitness goals beyond anything I could of hoped for. I love it!',
+          name: 'Tara Smith'
+        },
+        {
+          image: 'review_2-compressor.jpg',
+          text: 'The atmosphere at AVada Gym is amazing, the people are even better. All in all, it is a great place to work out',
+          name: 'Simon Chel'
+        },
+        {
+          image: 'review_3-compressor-2.jpg',
+          text: 'The facilities as Avada Gym stood out to me the most. They are well maintained and have high quality equipment.',
+          name: 'Jen Wirth'
+        },
+        {
+          image: 'review_4-compressor-2.jpg',
+          text: 'No bad tings to say about Avada Gym, they are top notch at every corner and truly take care of their customers',
+          name: 'Jeff Glum'
         }
       ]
     }
@@ -261,6 +262,7 @@ main
       text-align: center
       text-transform: uppercase
       font-size: 1.5rem
+      margin: 5rem 0
       h1
         padding: 3rem
 
@@ -295,4 +297,8 @@ main
         width:25%
         img
           width: 100%
+        :hover
+          opacity: .5
+          box-shadow: 20px 20px 10px $background_signup
+
 </style>
