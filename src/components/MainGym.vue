@@ -14,11 +14,12 @@
             <p>At Avada Gym, everything we do from top to bottom is of the highest quality to ensure we're equipped to help you reach your goals of a healthy and fit lifestyle.</p>
         </div>
     </section>
+    <div class="quadratino"></div>
     <section class="signup">
-        <div class="quadratino"></div>
         <div class="centered">
           <div class="image">
-            <img src="../assets/images/home_img-compressor-400x222.jpg" alt="">
+            <img src="../assets/images/home_img-compressor.jpg" alt="">
+            <img src="" alt="">
           </div>
           <div class="form">
             <h1>Sign Up For A Free Training Session!</h1>
@@ -33,6 +34,11 @@
         </div>
     </section>
     <section class="containercards">
+      <div class="cards">
+        <div class="card">
+          <img src="" alt="">
+        </div>
+      </div>
     </section>
   </main>
 </template>
@@ -46,6 +52,13 @@ export default {
 <style lang="sass" scoped>
 @import "../assets/styles/style"
 main
+  background-color: #212425
+  .quadratino
+      width: 15px
+      height: 15px
+      margin: 0 auto
+      border: 20px solid transparent
+      border-top: 20px solid $shark
   h1
     color: $white
   .jumbotron
@@ -91,24 +104,24 @@ main
         color: $edward
   .signup
     background-color: #212425
-    .quadratino
-      width: 15px
-      height: 15px
-      margin: 0 auto
-      border: 20px solid transparent
-      border-top: 20px solid $shark
+    height: calc(100vh - 40px)
+    @include flex-layout (center, center, no-wrap)
     .centered
+      width: 80%
+      margin: 0 auto
       @include flex-layout (center, center, wrap)
-      padding: 8rem 0
+      /* padding: 8rem 0 */
       .image
-        flex-grow: .2
+        width:50%
+        padding: 0 1rem
         img
           width: 100%
     .form
+      width: 50%
       display: flex
       flex-direction: column
       padding: 0 1rem
-      line-height: 2.5rem
+      line-height: 3rem
       label
         color: $edward
       input
