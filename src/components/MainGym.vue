@@ -14,7 +14,7 @@
             <p>At Avada Gym, everything we do from top to bottom is of the highest quality to ensure we're equipped to help you reach your goals of a healthy and fit lifestyle.</p>
         </div>
     </section>
-    <div class="quadratino"></div>
+    <div class="centeredquadratino"><div class="quadratino"></div></div>
     <section class="signup">
         <div class="centered">
           <div class="image">
@@ -43,6 +43,54 @@
           <img src="../assets/images/divider-x-red.png" alt="cross">
           <p>{{card.text}}</p>
         </div>
+      </div>
+    </section>
+    <section class="secondContainerCards">
+      <div class="title">
+        <h1>real world results</h1>
+        <img src="../assets/images/divider-xx-red.png" alt="">
+      </div>
+      <div class="firstcards">
+        <div class="firstcard">
+          <img src="../assets/images/review_1-compressor.jpg" alt="reviewer 1">
+          <div class="text">
+            <p>"The trainers at Avada Gym have helped me reach my fitness goals beyond anything I could of hoped for. I love it!"</p>
+          <h1>- Tara Smith</h1>
+          </div>
+        </div>
+        <div class="firstcard">
+          <img src="../assets/images/review_1-compressor.jpg" alt="reviewer 1">
+          <div class="text">
+            <p>"The trainers at Avada Gym have helped me reach my fitness goals beyond anything I could of hoped for. I love it!"</p>
+          <h1>- Tara Smith</h1>
+          </div>
+        </div>
+        <div class="firstcard">
+          <img src="../assets/images/review_1-compressor.jpg" alt="reviewer 1">
+          <div class="text">
+            <p>"The trainers at Avada Gym have helped me reach my fitness goals beyond anything I could of hoped for. I love it!"</p>
+          <h1>- Tara Smith</h1>
+          </div>
+        </div>
+        <div class="firstcard">
+          <img src="../assets/images/review_1-compressor.jpg" alt="reviewer 1">
+          <div class="text">
+            <p>"The trainers at Avada Gym have helped me reach my fitness goals beyond anything I could of hoped for. I love it!"</p>
+          <h1>- Tara Smith</h1>
+          </div>
+        </div>
+      </div>
+      <div class="title">
+        <h1>high performance facilities</h1>
+        <img src="../assets/images/divider-xx-red.png" alt="">
+      </div>
+      <div class="secondcards">
+        <div class="secondcard"><img src="../assets/images/home-image4.jpg" alt=""></div>
+        <div class="secondcard"><img src="../assets/images/home-image4.jpg" alt=""></div>
+        <div class="secondcard"><img src="../assets/images/home-image4.jpg" alt=""></div>
+        <div class="secondcard"><img src="../assets/images/home-image4.jpg" alt=""></div>
+        <div class="secondcard"><img src="../assets/images/home-image4.jpg" alt=""></div>
+        <div class="secondcard"><img src="../assets/images/home-image4.jpg" alt=""></div>
       </div>
     </section>
   </main>
@@ -84,7 +132,10 @@ export default {
 @import "../assets/styles/style"
 main
   background-color: #212425
-  .quadratino
+  .centeredquadratino
+    width: 100%
+    background-color: $background_signup
+    .quadratino
       width: 15px
       height: 15px
       margin: 0 auto
@@ -138,7 +189,7 @@ main
   .signup
     background-color: #212425
     height: calc(100vh - 40px)
-    @include flex-layout (center, center, no-wrap)
+    @include flex-layout (center, center, wrap)
     .centered
       width: 80%
       margin: 0 auto
@@ -201,4 +252,47 @@ main
         p
           color: $edward
           line-height:1.5rem
+  .secondContainerCards
+    @include flex-layout (center, center, wrap)
+    background-color: $shark
+    /* height: 100vh */
+    .title
+      width: 100%
+      text-align: center
+      text-transform: uppercase
+      font-size: 1.5rem
+      h1
+        padding: 3rem
+
+    .firstcards
+      width: 80%
+      margin: 0 auto
+      @include flex-layout (center, center, wrap)
+      gap: 30px
+      .firstcard
+        @include flex-layout (center, center, wrap)
+        width:40%
+        background-color: $background_signup
+        padding: 1.5rem
+        img
+          width: 30%
+        .text
+          width: 70%
+          padding: 0 1rem
+          color:  $edward
+          p
+            font-size: .8rem
+            line-height: 1.5rem
+            font-style: italic
+          h1
+            font-size: 1rem
+            color: $edward
+    .secondcards
+      @include flex-layout (center, center, wrap)
+      width: 80%
+      .secondcard
+        margin: 20px
+        width:25%
+        img
+          width: 100%
 </style>
