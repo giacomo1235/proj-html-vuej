@@ -78,6 +78,29 @@
         </div>
       </div>
     </section>
+    <section class="thirdContainerCards">
+      <div class="title">
+        <h1>meet our trainers</h1>
+        <img src="../assets/images/divider-xx-red.png" alt="">
+      </div>
+      <div class="thirdcards">
+        <div class="thirdcard" v-for="trainer in arrTrainers" :key="trainer.image">
+          <img :src="trainer.image" alt="">
+          <div class="contents">
+            <h1>{{trainer.name}}</h1>
+            <h1>{{trainer.role}}</h1>
+            <p>{{trainer.bio}}</p>
+            <div class="icone">
+              <div class="icon"><font-awesome-icon icon="fa-brands fa-facebook-f" /></div>
+              <div class="icon"><font-awesome-icon icon="fa-brands fa-twitter" /></div>
+              <div class="icon"><font-awesome-icon icon="fa-brands fa-instagram" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button>view all trainers</button>
+    </section>
+    <div class="centeredquadratino reverse"><div class="quadratino"></div></div>
   </main>
 </template>
 
@@ -155,6 +178,26 @@ export default {
           image: 'home-image6.jpg',
           href: '#!'
         }
+      ],
+      arrTrainers: [
+        {
+          image: 'trainer1.jpg',
+          name: 'Ann Baker',
+          role: 'Personal Trainer',
+          bio: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.'
+        },
+        {
+          image: 'trainer3.jpg',
+          name: 'Anne Warren',
+          role: 'Personal Trainer',
+          bio: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.'
+        },
+        {
+          image: 'trainer4.jpg',
+          name: 'Peter Rice',
+          role: 'Personal Trainer',
+          bio: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.'
+        }
       ]
     }
   }
@@ -174,8 +217,30 @@ main
       margin: 0 auto
       border: 20px solid transparent
       border-top: 20px solid $shark
+  .centeredquadratino.reverse
+    background-color: $shark
+    .quadratino
+      border-top: 20px solid $background_signup
   h1
     color: $white
+  button
+        background-color: transparent
+        padding: 0 1.5rem
+        border: 1px solid $white
+        color: $white
+        height: 40px
+        text-transform: uppercase
+        &:hover
+          color: $chestnut_rose
+          border-color: $chestnut_rose
+  .title
+      width: 100%
+      text-align: center
+      text-transform: uppercase
+      font-size: 1.5rem
+      margin: 5rem 0
+      h1
+        padding: 3rem
   .jumbotron
     width: 100%
     height: calc(100vh + 167px)
@@ -193,18 +258,7 @@ main
         text-transform: uppercase
         font-size: 5rem
       p
-        margin: 1.5rem 0
-      button
-        background-color: transparent
-        padding: 0 1.5rem
-        border: 1px solid $white
-        color: $white
-        margin: 1.5rem
-        height: 40px
-        text-transform: uppercase
-        &:hover
-          color: $chestnut_rose
-          border-color: $chestnut_rose
+        margin: 3rem 0
   .worldfitness
     height: 100vh
     background-color: $shark
@@ -215,6 +269,8 @@ main
       padding: 4rem 0
       text-align: center
       width: 50%
+      h1
+        font-size: 3rem
       img
         padding: 2rem 0
       p
@@ -287,16 +343,6 @@ main
   .secondContainerCards
     @include flex-layout (center, center, wrap)
     background-color: $shark
-    /* height: 100vh */
-    .title
-      width: 100%
-      text-align: center
-      text-transform: uppercase
-      font-size: 1.5rem
-      margin: 5rem 0
-      h1
-        padding: 3rem
-
     .firstcards
       width: 80%
       margin: 0 auto
@@ -350,5 +396,39 @@ main
         margin: 2rem
       h1
         text-transform: uppercase
-        font-size: 1rem
+        font-size: 1.2rem
+  .thirdContainerCards
+    width: 100%
+    text-align: center
+    padding: 3rem 0
+    .thirdcards
+      @include flex-layout (center, center, wrap)
+      width: 80%
+      margin: 0 auto
+      padding: 3rem 0
+      .thirdcard
+        width: 30%
+        margin: 0 10px
+        img
+          width: 100%
+        .contents
+          background-color: $shark
+          display: flex
+          flex-direction: column
+          gap: 14px
+          line-height: 1.5rem
+          padding: 50px 25px
+          text-align: start
+          p
+            color: $edward
+          .icone
+            display: flex
+            .icon
+              @include flex-layout (center, center, wrap)
+              width: 40px
+              height: 40px
+              margin: 0 20px
+              margin-left: -10px
+              color: white
+              background-color: $background_signup
 </style>
