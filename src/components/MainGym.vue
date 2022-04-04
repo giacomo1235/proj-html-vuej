@@ -69,6 +69,15 @@
         </div>
       </div>
     </section>
+    <section class="jumbotronsecond">
+      <div class="centered">
+        <div class="content">
+          <p>"I fear not tho man who has practiced 10,000 kiks once, but I fear the man who have practiced one kik 10,000 times"</p>
+          <img src="../assets/images/divider-white-xx.png" alt="">
+          <h1>bruce lee &bull; quote of the day</h1>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -187,7 +196,7 @@ main
         margin: 1.5rem 0
       button
         background-color: transparent
-        padding: 1rem 1.5rem
+        padding: 0 1.5rem
         border: 1px solid $white
         color: $white
         margin: 1.5rem
@@ -232,7 +241,6 @@ main
       label
         color: $edward
       input
-        select
         textarea:
           color: $white
         color: $white
@@ -324,5 +332,23 @@ main
           opacity: .5
           box-shadow: 20px 20px 10px $background_signup
           cursor: pointer
-
+  .jumbotronsecond
+    @include flex-layout (center, center, wrap)
+    background-image: url(../assets/images/home-testimonial-bg.jpg)
+    width: 100%
+    height: 100vh
+    background-position: center
+    background-size:  cover
+    .centered
+      width: 50%
+      margin: 0 auto
+      text-align: center
+      color: white
+      p
+        font-size: 2rem
+      img
+        margin: 2rem
+      h1
+        text-transform: uppercase
+        font-size: 1rem
 </style>
