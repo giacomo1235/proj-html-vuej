@@ -64,7 +64,9 @@
         <img src="../assets/images/divider-xx-red.png" alt="">
       </div>
       <div class="secondcards">
-        <div class="secondcard" v-for=" card in arrSecondCardsFacilities" :key="card.image"><img :src="card.image" alt=""></div>
+        <div class="secondcard" v-for=" card in arrSecondCardsFacilities" :key="card.image">
+          <a :href="card.href"><img :src="card.image" alt=""></a>
+        </div>
       </div>
     </section>
   </main>
@@ -121,22 +123,28 @@ export default {
       ],
       arrSecondCardsFacilities: [
         {
-          image: 'home-image1.jpg'
+          image: 'home-image1.jpg',
+          href: '#!'
         },
         {
-          image: 'home-image2.jpg'
+          image: 'home-image2.jpg',
+          href: '#!'
         },
         {
-          image: 'home-image3.jpg'
+          image: 'home-image3.jpg',
+          href: '#!'
         },
         {
-          image: 'home-image4.jpg'
+          image: 'home-image4.jpg',
+          href: '#!'
         },
         {
-          image: 'home-image54.jpg'
+          image: 'home-image54.jpg',
+          href: '#!'
         },
         {
-          image: 'home-image6.jpg'
+          image: 'home-image6.jpg',
+          href: '#!'
         }
       ]
     }
@@ -315,5 +323,6 @@ main
         :hover
           opacity: .5
           box-shadow: 20px 20px 10px $background_signup
+          cursor: pointer
 
 </style>
