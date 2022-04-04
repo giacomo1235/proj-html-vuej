@@ -133,11 +133,11 @@ export default {
           image: 'home-image4.jpg'
         },
         {
-          image: 'home-image54.jpg'
+          image: 'home-image5.jpg'
         },
         {
           image: 'home-image6.jpg'
-        }
+        },
       ]
     }
   }
