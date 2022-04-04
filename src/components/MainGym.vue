@@ -35,14 +35,7 @@
     </section>
     <section class="containercards">
       <div class="cards">
-        <div class="card" v-for="card in arrFirstCards" :key="card.font">
-          <div class="font">
-           <font-awesome-icon :icon="card.font" />
-          </div>
-          <h1>{{card.title}}</h1>
-          <img src="../assets/images/divider-x-red.png" alt="cross">
-          <p>{{card.text}}</p>
-        </div>
+        <GymCard />
       </div>
     </section>
     <section class="secondContainerCards">
@@ -105,32 +98,14 @@
 </template>
 
 <script>
+import GymCard from './GymCard.vue'
 export default {
   name: 'MainGym',
+  components: {
+    GymCard
+  },
   data () {
     return {
-      arrFirstCards: [
-        {
-          font: 'fa-link-slash',
-          title: 'Strength & Conditioning',
-          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
-        },
-        {
-          font: 'fa-solid fa-bicycle',
-          title: 'Strength & Conditioning',
-          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
-        },
-        {
-          font: 'fa-solid fa-cloud',
-          title: 'Strength & Conditioning',
-          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
-        },
-        {
-          font: 'fa-solid fa-heart-pulse',
-          title: 'Strength & Conditioning',
-          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
-        }
-      ],
       arrSecondCardsReview: [
         {
           image: 'review_1-compressor.jpg',
@@ -207,7 +182,6 @@ export default {
 <style lang="sass" scoped>
 @import "../assets/styles/style"
 main
-  background-color: #212425
   .centeredquadratino
     width: 100%
     background-color: $background_signup
@@ -319,27 +293,6 @@ main
     background-image: url(../assets/images/gym_bkgd_bw-compressor.jpg)
     height:100vh
     @include flex-layout (center, center, no-wrap)
-    .cards
-      @include flex-layout (center, center, wrap)
-      width: 80%
-      margin: 0 auto
-      .card
-        width: 20%
-        @include flex-layout (center, center, wrap)
-        flex-direction: column
-        gap: 1.3rem
-        .font
-          font-size: 3rem
-          font-wheight: 600
-          color: $chestnut_rose
-          border: 2px solid $chestnut_rose
-          border-radius: 20rem
-          padding: 1.5rem
-        h1
-          font-size: 1rem
-        p
-          color: $edward
-          line-height:1.5rem
   .secondContainerCards
     @include flex-layout (center, center, wrap)
     background-color: $shark
@@ -398,6 +351,7 @@ main
         text-transform: uppercase
         font-size: 1.2rem
   .thirdContainerCards
+    background-color: $background_signup
     width: 100%
     text-align: center
     padding: 3rem 0
