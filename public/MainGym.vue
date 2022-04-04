@@ -65,7 +65,7 @@
       </div>
       <div class="secondcards">
         <div class="secondcard" v-for=" card in arrSecondCardsFacilities" :key="card.image">
-          <a :href="card.href"><img :src="card.image" alt=""></a>
+          <a :href="card.href"><img :src="card.image" alt=""> ciao</a>
         </div>
       </div>
     </section>
@@ -143,7 +143,7 @@ export default {
           href: '#!'
         },
         {
-          image: 'home-image6.jpg',
+          image: '',
           href: '#!'
         },
       ]
