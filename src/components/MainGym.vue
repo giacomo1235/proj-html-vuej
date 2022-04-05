@@ -44,13 +44,14 @@
         <img src="../assets/images/divider-xx-red.png" alt="">
       </div>
       <div class="firstcards">
-        <div class="firstcard" v-for=" card in arrSecondCardsReview" :key="card.image">
+        <ReviewCard />
+        <!-- <div class="firstcard" v-for=" card in arrSecondCardsReview" :key="card.image">
           <img :src="card.image" :alt="card.name">
           <div class="text">
             <p>"{{card.text}}"</p>
           <h1>- {{card.name}}</h1>
           </div>
-        </div>
+        </div> -->
       </div>
       <div class="title">
         <h1>high performance facilities</h1>
@@ -117,10 +118,12 @@
 
 <script>
 import GymCard from './GymCard.vue'
+import ReviewCard from './ReviewCard.vue'
 export default {
   name: 'MainGym',
   components: {
-    GymCard
+    GymCard,
+    ReviewCard
   },
   data () {
     return {
@@ -346,7 +349,7 @@ main
   .secondContainerCards
     @include flex-layout (center, center, wrap)
     background-color: $shark
-    .firstcards
+    /* .firstcards
       width: 80%
       margin: 0 auto
       @include flex-layout (center, space-between, wrap)
@@ -368,7 +371,7 @@ main
             font-style: italic
           h1
             font-size: 1rem
-            color: $edward
+            color: $edward */
     .secondcards
       @include flex-layout (center, space-between, wrap)
       width: 80%
