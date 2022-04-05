@@ -94,6 +94,21 @@
       <button>view all trainers</button>
     </section>
     <div class="centeredquadratino reverse"><div class="quadratino"></div></div>
+    <section class="news">
+      <div class="title">
+        <h1>performance news</h1>
+        <img src="../assets/images/divider-xx-red.png" alt="">
+      </div>
+      <div class="fourthcards">
+        <div class="fourthcard" v-for="news in arrNews" :key="news.title">
+          <img :src="news.image" alt="">
+          <div class="contents">
+            <h1>{{news.title}}</h1>
+            <p>{{news.text}}</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -173,6 +188,38 @@ export default {
           role: 'Personal Trainer',
           bio: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.'
         }
+      ],
+      arrNews: [
+        {
+          title: 'Train with free weights or your body wight?',
+          text: 'lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.',
+          image: 'blog1.jpg'
+        },
+        {
+          title: 'Train with free weights or your body wight?',
+          text: 'lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.v',
+          image: 'blog6.jpg'
+        },
+        {
+          title: 'Train with free weights or your body wight?',
+          text: 'lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.',
+          image: 'trainer4.jpg'
+        },
+        {
+          title: 'Train with free weights or your body wight?',
+          text: 'lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.',
+          image: 'blog4.jpg'
+        },
+        {
+          title: 'Train with free weights or your body wight?',
+          text: 'lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.',
+          image: 'trainer3.jpg'
+        },
+        {
+          title: 'Train with free weights or your body wight?',
+          text: 'lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.',
+          image: 'trainer1.jpg'
+        }
       ]
     }
   }
@@ -212,7 +259,7 @@ main
       text-align: center
       text-transform: uppercase
       font-size: 1.5rem
-      margin: 5rem 0
+      margin-bottom: 5rem
       h1
         padding: 3rem
   .jumbotron
@@ -385,4 +432,18 @@ main
               margin-left: -10px
               color: white
               background-color: $background_signup
+  .news
+    background-color: $shark
+    .fourthcards
+      width: 80%
+      margin: 0 auto
+      display: flex
+      flex-wrap: wrap
+      .fourthcard
+        flex: 1 1 1
+        width: 30%
+        margin: 1rem
+        height: 100%
+        img
+          width: 100%
 </style>
