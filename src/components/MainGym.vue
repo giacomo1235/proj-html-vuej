@@ -107,6 +107,7 @@
             <p>{{news.text}}</p>
           </div>
         </div>
+      <button>read all articles</button>
       </div>
     </section>
   </main>
@@ -197,7 +198,7 @@ export default {
         },
         {
           title: 'Train with free weights or your body wight?',
-          text: 'lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.v',
+          text: 'orem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.v',
           image: 'blog6.jpg'
         },
         {
@@ -217,7 +218,7 @@ export default {
         },
         {
           title: 'Train with free weights or your body wight?',
-          text: 'lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.',
+          text: 'lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.',
           image: 'trainer1.jpg'
         }
       ]
@@ -435,15 +436,27 @@ main
   .news
     background-color: $shark
     .fourthcards
-      width: 80%
-      margin: 0 auto
       display: flex
       flex-wrap: wrap
+      justify-content: center
+      button
+        margin: 2rem 0
+      text-align: center
+      width: 80%
+      margin: 0 auto
       .fourthcard
-        flex: 1 1 1
+        background-color: $background_signup
         width: 30%
         margin: 1rem
+        padding: 1rem
         height: 100%
+        text-align: start
+        .contents
+          h1
+            margin: 1rem 0
+          p
+            color: $edward
         img
           width: 100%
+
 </style>
