@@ -52,9 +52,6 @@
       </div>
       <div class="secondcards">
         <FacilitiesCard />
-        <!-- <div class="secondcard" v-for=" card in arrSecondCardsFacilities" :key="card.image">
-          <a :href="card.href"><img :src="card.image" alt=""></a>
-        </div> -->
       </div>
     </section>
     <section class="jumbotronsecond">
@@ -72,7 +69,8 @@
         <img src="../assets/images/divider-xx-red.png" alt="">
       </div>
       <div class="thirdcards">
-        <div class="thirdcard" v-for="trainer in arrTrainers" :key="trainer.image">
+        <TrainerCard />
+        <!-- <div class="thirdcard" v-for="trainer in arrTrainers" :key="trainer.image">
           <img :src="trainer.image" alt="">
           <div class="contents">
             <h1>{{trainer.name}}</h1>
@@ -84,7 +82,7 @@
               <div class="icon"><font-awesome-icon icon="fa-brands fa-instagram" /></div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
       <button>view all trainers</button>
     </section>
@@ -114,42 +112,18 @@
 import GymCard from './GymCard.vue'
 import ReviewCard from './ReviewCard.vue'
 import FacilitiesCard from './FacilitiesCard.vue'
+import TrainerCard from './TrainerCard.vue'
 export default {
   name: 'MainGym',
   components: {
     GymCard,
     ReviewCard,
-    FacilitiesCard
+    FacilitiesCard,
+    TrainerCard
   },
   data () {
     return {
-      /* arrSecondCardsFacilities: [
-        {
-          image: 'home-image1.jpg',
-          href: '#!'
-        },
-        {
-          image: 'home-image2.jpg',
-          href: '#!'
-        },
-        {
-          image: 'home-image3.jpg',
-          href: '#!'
-        },
-        {
-          image: 'home-image4.jpg',
-          href: '#!'
-        },
-        {
-          image: 'home-image54.jpg',
-          href: '#!'
-        },
-        {
-          image: 'home-image6.jpg',
-          href: '#!'
-        }
-      ], */
-      arrTrainers: [
+      /* arrTrainers: [
         {
           image: 'trainer1.jpg',
           name: 'Ann Baker',
@@ -168,7 +142,7 @@ export default {
           role: 'Personal Trainer',
           bio: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.'
         }
-      ],
+      ], */
       arrNews: [
         {
           title: 'Train with free weights or your body wight?',
@@ -324,18 +298,6 @@ main
     @include flex-layout (center, center, wrap)
     background-color: $shark
     padding: 3rem 0
-    /* .secondcards
-      @include flex-layout (center, space-between, wrap)
-      width: 80%
-      gap: 40px
-      .secondcard
-        width:30%
-        img
-          width: 100%
-        :hover
-          opacity: .5
-          box-shadow: 20px 20px 10px $background_signup
-          cursor: pointer */
   .jumbotronsecond
     @include flex-layout (center, center, wrap)
     background-image: url(../assets/images/home-testimonial-bg.jpg)
@@ -360,7 +322,7 @@ main
     width: 100%
     text-align: center
     padding: 3rem 0
-    .thirdcards
+    /* .thirdcards
       @include flex-layout (center, space-between, wrap)
       width: 80%
       margin: 0 auto
@@ -389,7 +351,7 @@ main
               margin: 0 20px
               margin-left: -10px
               color: white
-              background-color: $background_signup
+              background-color: $background_signup */
   .news
     background-color: $shark
     .fourthcards
