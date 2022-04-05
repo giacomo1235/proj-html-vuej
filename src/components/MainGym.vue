@@ -70,19 +70,6 @@
       </div>
       <div class="thirdcards">
         <TrainerCard />
-        <!-- <div class="thirdcard" v-for="trainer in arrTrainers" :key="trainer.image">
-          <img :src="trainer.image" alt="">
-          <div class="contents">
-            <h1>{{trainer.name}}</h1>
-            <h1>{{trainer.role}}</h1>
-            <p>{{trainer.bio}}</p>
-            <div class="icone">
-              <div class="icon"><font-awesome-icon icon="fa-brands fa-facebook-f" /></div>
-              <div class="icon"><font-awesome-icon icon="fa-brands fa-twitter" /></div>
-              <div class="icon"><font-awesome-icon icon="fa-brands fa-instagram" /></div>
-            </div>
-          </div>
-        </div> -->
       </div>
       <button>view all trainers</button>
     </section>
@@ -93,13 +80,7 @@
         <img src="../assets/images/divider-xx-red.png" alt="">
       </div>
       <div class="fourthcards">
-        <div class="fourthcard" v-for="news in arrNews" :key="news.title">
-          <img :src="news.image" alt="">
-          <div class="contents">
-            <h1>{{news.title}}</h1>
-            <p>{{news.text}}</p>
-          </div>
-        </div>
+        <NewsCard />
         <div class="centeredbutton">
           <button>read all articles</button>
         </div>
@@ -113,68 +94,19 @@ import GymCard from './GymCard.vue'
 import ReviewCard from './ReviewCard.vue'
 import FacilitiesCard from './FacilitiesCard.vue'
 import TrainerCard from './TrainerCard.vue'
+import NewsCard from './NewsCard.vue'
 export default {
   name: 'MainGym',
   components: {
     GymCard,
     ReviewCard,
     FacilitiesCard,
-    TrainerCard
+    TrainerCard,
+    NewsCard
   },
   data () {
     return {
-      /* arrTrainers: [
-        {
-          image: 'trainer1.jpg',
-          name: 'Ann Baker',
-          role: 'Personal Trainer',
-          bio: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.'
-        },
-        {
-          image: 'trainer3.jpg',
-          name: 'Anne Warren',
-          role: 'Personal Trainer',
-          bio: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.'
-        },
-        {
-          image: 'trainer4.jpg',
-          name: 'Peter Rice',
-          role: 'Personal Trainer',
-          bio: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.'
-        }
-      ], */
-      arrNews: [
-        {
-          title: 'Train with free weights or your body wight?',
-          text: 'lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.',
-          image: 'blog1.jpg'
-        },
-        {
-          title: 'Train with free weights or your body wight?',
-          text: 'orem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.v',
-          image: 'blog6.jpg'
-        },
-        {
-          title: 'Train with free weights or your body wight?',
-          text: 'lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.',
-          image: 'trainer4.jpg'
-        },
-        {
-          title: 'Train with free weights or your body wight?',
-          text: 'lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.',
-          image: 'blog4.jpg'
-        },
-        {
-          title: 'Train with free weights or your body wight?',
-          text: 'lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.',
-          image: 'trainer3.jpg'
-        },
-        {
-          title: 'Train with free weights or your body wight?',
-          text: 'lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.lorem ipsum ofjwfnf Lorem ipsum dolor sit amet, consectetur adipisicing elit. In augue nisl,onare volutpat.',
-          image: 'trainer1.jpg'
-        }
-      ]
+
     }
   }
 }
@@ -322,62 +254,10 @@ main
     width: 100%
     text-align: center
     padding: 3rem 0
-    /* .thirdcards
-      @include flex-layout (center, space-between, wrap)
-      width: 80%
-      margin: 0 auto
-      padding: 3rem 0
-      .thirdcard
-        width: 30%
-        margin: 0 10px
-        img
-          width: 100%
-        .contents
-          background-color: $shark
-          display: flex
-          flex-direction: column
-          gap: 14px
-          line-height: 1.5rem
-          padding: 50px 25px
-          text-align: start
-          p
-            color: $edward
-          .icone
-            display: flex
-            .icon
-              @include flex-layout (center, center, wrap)
-              width: 40px
-              height: 40px
-              margin: 0 20px
-              margin-left: -10px
-              color: white
-              background-color: $background_signup */
   .news
     background-color: $shark
-    .fourthcards
-      display: flex
-      flex-wrap: wrap
-      justify-content: space-between
-      button
-        margin: 2rem 0
-      text-align: center
-      width: 80%
-      margin: 0 auto
-      .fourthcard
-        background-color: $background_signup
-        width: 30%
-        margin: 1rem
-        padding: 1rem
-        height: 100%
-        text-align: start
-        .contents
-          h1
-            margin: 1rem 0
-          p
-            color: $edward
-        img
-          width: 100%
-      .centeredbutton
-        @include flex-layout (center, center, wrap)
-        width: 100%
+    .centeredbutton
+      @include flex-layout (center, center, wrap)
+      width: 100%
+      padding: 4rem 0
 </style>
