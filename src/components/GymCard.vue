@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="cards">
       <div class="card" v-for="card in arrFirstCards" :key="card.font">
           <div class="font">
            <font-awesome-icon :icon="card.font" />
@@ -46,8 +46,8 @@ export default {
 
 <style scoped lang="sass">
 @import "../assets/styles/style"
-main
-  @include flex-layout (center, center, wrap)
+.cards
+  @include flex-layout (center, space-between, wrap)
   width: 80%
   margin: 0 auto
   gap: 1rem

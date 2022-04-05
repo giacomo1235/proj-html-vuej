@@ -107,7 +107,9 @@
             <p>{{news.text}}</p>
           </div>
         </div>
-      <button>read all articles</button>
+        <div class="centeredbutton">
+          <button>read all articles</button>
+        </div>
       </div>
     </section>
   </main>
@@ -347,11 +349,11 @@ main
     .firstcards
       width: 80%
       margin: 0 auto
-      @include flex-layout (center, center, wrap)
-      gap: 30px
+      @include flex-layout (center, space-between, wrap)
+      gap: 40px
       .firstcard
         @include flex-layout (center, center, wrap)
-        width:40%
+        width:48%
         background-color: $background_signup
         padding: 1.5rem
         img
@@ -368,11 +370,11 @@ main
             font-size: 1rem
             color: $edward
     .secondcards
-      @include flex-layout (center, center, wrap)
+      @include flex-layout (center, space-between, wrap)
       width: 80%
+      gap: 40px
       .secondcard
-        margin: 20px
-        width:25%
+        width:30%
         img
           width: 100%
         :hover
@@ -404,7 +406,7 @@ main
     text-align: center
     padding: 3rem 0
     .thirdcards
-      @include flex-layout (center, center, wrap)
+      @include flex-layout (center, space-between, wrap)
       width: 80%
       margin: 0 auto
       padding: 3rem 0
@@ -438,7 +440,7 @@ main
     .fourthcards
       display: flex
       flex-wrap: wrap
-      justify-content: center
+      justify-content: space-between
       button
         margin: 2rem 0
       text-align: center
@@ -458,5 +460,7 @@ main
             color: $edward
         img
           width: 100%
-
+      .centeredbutton
+        @include flex-layout (center, center, wrap)
+        width: 100%
 </style>
