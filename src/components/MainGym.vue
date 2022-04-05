@@ -45,22 +45,16 @@
       </div>
       <div class="firstcards">
         <ReviewCard />
-        <!-- <div class="firstcard" v-for=" card in arrSecondCardsReview" :key="card.image">
-          <img :src="card.image" :alt="card.name">
-          <div class="text">
-            <p>"{{card.text}}"</p>
-          <h1>- {{card.name}}</h1>
-          </div>
-        </div> -->
       </div>
       <div class="title">
         <h1>high performance facilities</h1>
         <img src="../assets/images/divider-xx-red.png" alt="">
       </div>
       <div class="secondcards">
-        <div class="secondcard" v-for=" card in arrSecondCardsFacilities" :key="card.image">
+        <FacilitiesCard />
+        <!-- <div class="secondcard" v-for=" card in arrSecondCardsFacilities" :key="card.image">
           <a :href="card.href"><img :src="card.image" alt=""></a>
-        </div>
+        </div> -->
       </div>
     </section>
     <section class="jumbotronsecond">
@@ -119,37 +113,17 @@
 <script>
 import GymCard from './GymCard.vue'
 import ReviewCard from './ReviewCard.vue'
+import FacilitiesCard from './FacilitiesCard.vue'
 export default {
   name: 'MainGym',
   components: {
     GymCard,
-    ReviewCard
+    ReviewCard,
+    FacilitiesCard
   },
   data () {
     return {
-      arrSecondCardsReview: [
-        {
-          image: 'review_1-compressor.jpg',
-          text: 'The trainers at Avada Gym have helped me reach my fitness goals beyond anything I could of hoped for. I love it!',
-          name: 'Tara Smith'
-        },
-        {
-          image: 'review_2-compressor.jpg',
-          text: 'The atmosphere at AVada Gym is amazing, the people are even better. All in all, it is a great place to work out',
-          name: 'Simon Chel'
-        },
-        {
-          image: 'review_3-compressor-2.jpg',
-          text: 'The facilities as Avada Gym stood out to me the most. They are well maintained and have high quality equipment.',
-          name: 'Jen Wirth'
-        },
-        {
-          image: 'review_4-compressor-2.jpg',
-          text: 'No bad tings to say about Avada Gym, they are top notch at every corner and truly take care of their customers',
-          name: 'Jeff Glum'
-        }
-      ],
-      arrSecondCardsFacilities: [
+      /* arrSecondCardsFacilities: [
         {
           image: 'home-image1.jpg',
           href: '#!'
@@ -174,7 +148,7 @@ export default {
           image: 'home-image6.jpg',
           href: '#!'
         }
-      ],
+      ], */
       arrTrainers: [
         {
           image: 'trainer1.jpg',
@@ -349,30 +323,8 @@ main
   .secondContainerCards
     @include flex-layout (center, center, wrap)
     background-color: $shark
-    /* .firstcards
-      width: 80%
-      margin: 0 auto
-      @include flex-layout (center, space-between, wrap)
-      gap: 40px
-      .firstcard
-        @include flex-layout (center, center, wrap)
-        width:48%
-        background-color: $background_signup
-        padding: 1.5rem
-        img
-          width: 30%
-        .text
-          width: 70%
-          padding: 0 1rem
-          color:  $edward
-          p
-            font-size: .8rem
-            line-height: 1.5rem
-            font-style: italic
-          h1
-            font-size: 1rem
-            color: $edward */
-    .secondcards
+    padding: 3rem 0
+    /* .secondcards
       @include flex-layout (center, space-between, wrap)
       width: 80%
       gap: 40px
@@ -383,7 +335,7 @@ main
         :hover
           opacity: .5
           box-shadow: 20px 20px 10px $background_signup
-          cursor: pointer
+          cursor: pointer */
   .jumbotronsecond
     @include flex-layout (center, center, wrap)
     background-image: url(../assets/images/home-testimonial-bg.jpg)
