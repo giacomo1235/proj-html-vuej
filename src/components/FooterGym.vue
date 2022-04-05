@@ -53,8 +53,15 @@
         </div>
       </section>
       <section class="socialfooter">
-        <div class="copiright">
+        <div class="centered">
+          <div class="copiright">
           <p>copiright 2012 - 2020 Avada Theme by Theme Fusion All Rights Reserved Powered by WordPress</p>
+        </div>
+        <div class="icone">
+          <div class="icon"><font-awesome-icon icon="fa-brands fa-facebook-f" /></div>
+          <div class="icon"><font-awesome-icon icon="fa-brands fa-twitter" /></div>
+          <div class="icon"><font-awesome-icon icon="fa-brands fa-instagram" /></div>
+        </div>
         </div>
       </section>
   </footer>
@@ -89,5 +96,43 @@ export default {
       &:hover
         color: $edward
         border-color: $edward
-
+.mainfooter
+  width: 100%
+  height: calc(100vh - 200px)
+  background-color: $background_signup
+  .container
+    width: 80%
+    padding: 2rem 0
+    margin: 0 auto
+    @include flex-layout (center, space-between, wrap)
+    .col
+      width: 23%
+      h1
+        text-transform: uppercase
+      ul
+        color: $edward
+        list-style-type: none
+        li
+          margin: .5rem 0
+          line-height: 2rem
+.socialfooter
+  width: 100%
+  padding: 1rem 0
+  background-color: rgb(10%, 11%, 12%)
+  .centered
+    width: 80%
+    margin: 0 auto
+    @include flex-layout (center, space-between, wrap)
+    .copiright
+      color: $edward
+    .icone
+      display: flex
+      .icon
+        @include flex-layout (center, center, wrap)
+        width: 40px
+        height: 40px
+        margin: 0 20px
+        margin-left: -10px
+        color: white
+        background-color: $chestnut_rose
 </style>
