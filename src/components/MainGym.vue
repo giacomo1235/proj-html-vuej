@@ -221,7 +221,6 @@ main
         color: $white
         text-transform: uppercase
         border-color: transparent
-        padding: .5rem 0
         margin-top: 3rem
         &:hover
           cursor: pointer
