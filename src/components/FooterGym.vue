@@ -25,8 +25,10 @@
           <div class="col">
             <h1>recent posts</h1>
             <ul>
-              <li>train with free weights or your body weight?</li>
-              <li>nutritional advice that will keep you training</li>
+             <!--  <li>{{news.arrNews[arrNews.length - 1].title}}</li>
+              <li>{{arrNews[arrNews.length - 2].title}}</li> -->
+              <li>Lorem ipsum dolor sit amet cons.Lorem ipsum dolor sit amet cons</li>
+              <li>Lorem ipsum dolor sit amet con.</li>
             </ul>
           </div>
           <div class="col">
@@ -69,8 +71,14 @@
 
 <script>
 export default {
-  name: 'FooterGym'
-
+  name: 'FooterGym',
+  data () {
+    return {
+    }
+  },
+  props: {
+    arrNews: Array
+  }
 }
 </script>
 

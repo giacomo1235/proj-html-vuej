@@ -80,7 +80,7 @@
         <img src="../assets/images/divider-xx-red.png" alt="">
       </div>
       <div class="fourthcards">
-        <NewsCard />
+        <NewsCard @lastnews="setLastNews" :news-data="news" />
         <div class="centeredbutton">
           <button>read all articles</button>
         </div>
@@ -108,6 +108,12 @@ export default {
     return {
 
     }
+  },
+  methods: {
+    setLastNews (arrNews) {
+      console.log(arrNews)
+      this.$emit('lastnews', this.arrNews)
+    }
   }
 }
 </script>
@@ -128,8 +134,6 @@ main
     background-color: $shark
     .quadratino
       border-top: 20px solid $background_signup
-  h1
-    color: $white
   button
         background-color: transparent
         padding: 0 1.5rem

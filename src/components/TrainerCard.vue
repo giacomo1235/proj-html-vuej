@@ -1,7 +1,9 @@
 <template>
   <div class="thirdcards">
     <div class="thirdcard" v-for="trainer in arrTrainers" :key="trainer.image">
-      <img :src="trainer.image" alt="">
+      <div class="image">
+        <img :src="trainer.image" alt="">
+      </div>
       <div class="contents">
         <h1>{{trainer.name}}</h1>
         <h1>{{trainer.role}}</h1>

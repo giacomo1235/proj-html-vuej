@@ -1,6 +1,6 @@
 <template>
   <main class="cards">
-      <div class="card" v-for="card in arrFirstCards" :key="card.font">
+      <div class="card" style="background-color: transparent" v-for="card in arrFirstCards" :key="card.font">
           <div class="font">
            <font-awesome-icon :icon="card.font" />
           </div>
@@ -52,6 +52,7 @@ export default {
   margin: 0 auto
   gap: 1rem
   .card
+      background-color:transparent
       width: 20%
       @include flex-layout (center, center, wrap)
       flex-direction: column

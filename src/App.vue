@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <HeaderGym />
-    <MainGym />
-    <FooterGym />
+    <MainGym @lastnews="latestNews"/>
+    <FooterGym :arr-news="arrLastNews" :news-data ="news"/>
   </div>
 </template>
 
@@ -16,10 +16,21 @@ export default {
     HeaderGym,
     MainGym,
     FooterGym
+  },
+  data () {
+    return {
+      arrLastNews: []
+    }
+  },
+  methods: {
+    latestNews (arrNews) {
+      this.arrLastNews = arrNews
+    }
   }
 }
 </script>
 
 <style lang="sass">
 @import "./assets/styles/style.scss"
+@import "~bootstrap"
 </style>
